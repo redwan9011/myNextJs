@@ -1,15 +1,18 @@
-"use client"
+
+import Counter from "@/Components/Counter/Counter";
+import Redwan from "@/Components/Redwan/Redwan";
+import Teampage from "@/Pages/TeamPage/Teampage";
 import Link from "next/link";
-import { useState } from "react";
+
 
 export default function Home() {
-  const [counter, setCounter] = useState(0)
+ 
   return (
     <div>
       <Link  href="/contact"> contact</Link>
-      <h2>Counter: {counter}</h2>
-     <button className="btn btn-primary " onClick={()=> setCounter(counter +1)}>Increase</button>
-     <button className="btn btn-primary" onClick={()=> setCounter(counter-1)}>Decrease</button>
+    <Counter></Counter>
+    <Redwan></Redwan>
+    <Teampage></Teampage>
     </div>
  
   );
